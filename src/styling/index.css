@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'SairaCondensed-Regular';
+    src: local('SairaCondensed-Regular'), url(../resources/fonts/SairaCondensed-Regular.ttf) format('opentype');
+}
+
+body {
+    font-family: 'SairaCondensed-Regular';
+}

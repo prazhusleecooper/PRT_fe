@@ -1,0 +1,241 @@
+@import './variables.css';
+
+/** LARGER SCREENS  */
+@media only screen and (min-width: 768px) {
+    
+.primary-section {
+    padding: 1em 10em;
+}
+
+.heading-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75em;
+    color: var(--primary-blue);
+    margin: .75em 0;
+}
+
+.form-section {
+    padding: 1em 3em;
+    border-bottom: 2px solid var(--primary-blue);
+    -webkit-box-shadow: 0px 0px 37px 5px rgba(153,153,153,1);
+    -moz-box-shadow: 0px 0px 37px 5px rgba(153,153,153,1);
+    box-shadow: 0px 0px 37px 5px rgba(153,153,153,1);
+}
+
+.form-input-field {
+    height: 2em;
+    padding: .5em;
+    outline: none;
+    border: 1px solid #9C9C9C;
+}
+
+.form-input-field:hover {
+    outline: none;
+    border: 1px solid var(--primary-blue-light);
+}
+
+.form-input-field:focus, .form-input-field:focus:hover {
+    outline: none;
+    border: 1px solid var(--primary-blue);
+}
+
+.customer-name-field, .customer-email-field {
+    width: 100%;
+}
+
+.phone-label {
+    margin: 0;
+}
+
+.forms-row, .form-btns-row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+}
+
+.customer-phone1-field, .customer-phone2-field {
+    margin: 0 1em;
+}
+
+.form-sub-heading {
+    font-size: 1.5em;
+}
+
+.address-label {
+    margin: 0;
+}
+
+
+.customer-houseNo-field {
+    margin: 0 1em;
+}
+
+.customer-roadName-field {
+    margin: 0 1em;
+    width: 45%;
+}
+
+.customer-landmark-field, .customer-area-field, .customer-city-field, .customer-pin-field, .customer-country-field {
+    margin: 0 1em;
+    width: 35%;
+}
+
+.country-row {
+    margin: .5em 0;
+}
+
+.form-btn, .form-btn:active, .form-btn:focus {
+    margin: 0 1.5em 0 0;
+    border: none;
+    outline: none;
+    padding: .35em .75em;
+    border-radius: 5em;
+    color: #FFFFFF;
+}
+
+.add-customer-btn {
+    background-color: var(--primary-blue);
+}
+
+.clear-form-btn {
+    background-color: var(--primary-orange);
+}
+
+.form-btn:hover{
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+}
+
+/** SMALLER SCREENS */
+@media only screen and (max-width: 767px) {
+    
+.primary-section {
+    padding: 1em 1em;
+}
+
+.heading-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75em;
+    color: var(--primary-blue);
+    margin: .75em 0;
+}
+
+.form-section {
+    padding: 1em 1.5em;
+    border-bottom: 2px solid var(--primary-blue);
+    -webkit-box-shadow: 0px 0px 37px 5px rgba(153,153,153,1);
+    -moz-box-shadow: 0px 0px 37px 5px rgba(153,153,153,1);
+    box-shadow: 0px 0px 37px 5px rgba(153,153,153,1);
+}
+
+.form-input-field {
+    height: 2em;
+    padding: .5em;
+    outline: none;
+    border: 1px solid #9C9C9C;
+}
+
+.form-input-field:hover {
+    outline: none;
+    border: 1px solid var(--primary-blue-light);
+}
+
+.form-input-field:focus, .form-input-field:focus:hover {
+    outline: none;
+    border: 1px solid var(--primary-blue);
+}
+
+.customer-name-field, .customer-email-field {
+    width: 100%;
+}
+
+.phone-label {
+    margin: 0;
+}
+
+.forms-row{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+    margin: 1em 0;
+}
+
+.form-btns-row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+}
+
+.customer-phone1-field, .customer-phone2-field {
+    margin: 0 1em;
+}
+
+.form-sub-heading {
+    font-size: 1.5em;
+}
+
+.address-label {
+    margin: 0;
+}
+
+
+.customer-houseNo-field {
+    margin: 0 1em;
+}
+
+.customer-roadName-field {
+    margin: 0 1em;
+    width: 45%;
+}
+
+.customer-landmark-field, .customer-area-field, .customer-city-field, .customer-pin-field, .customer-country-field {
+    margin: 0 1em;
+    width: 35%;
+}
+
+.country-row {
+    margin: .5em 0;
+}
+
+.form-btn, .form-btn:active, .form-btn:focus {
+    margin: 0 1.5em 0 0;
+    border: none;
+    outline: none;
+    padding: .35em .75em;
+    border-radius: 5em;
+    color: #FFFFFF;
+}
+
+.add-customer-btn {
+    background-color: var(--primary-blue);
+}
+
+.clear-form-btn {
+    background-color: var(--primary-orange);
+}
+
+.form-btn:hover{
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+}

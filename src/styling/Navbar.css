@@ -1,0 +1,41 @@
+@import './variables.css';
+
+.navBar {
+    height: 3.5em;
+    width: 100%;
+    padding: 0 1em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--primary-blue);
+    -webkit-box-shadow: 0px 0px 37px 5px rgba(153,153,153,1);
+    -moz-box-shadow: 0px 0px 37px 5px rgba(153,153,153,1);
+    box-shadow: 0px 0px 37px 5px rgba(153,153,153,1);
+    /* margin-top: 1em; */
+    /* background: rgb(168,98,68);
+    background: linear-gradient(0deg, rgba(168,98,68,1) 0%, rgba(189,59,4,1) 100%); */
+}
+
+.navBar-left {
+    font-size: 1.5em;
+    color: var(--primary-blue);
+}
+
+.navBar-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-link, .nav-link:hover {
+    color: var(--primary-blue);
+
+}
+
+.nav-link-active, .nav-link-active:hover {
+    background-color: var(--primary-blue);
+    color: white;
+    border-radius: 5em;
+}
