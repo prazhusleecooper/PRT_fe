@@ -31,7 +31,9 @@
 
 .nav-link, .nav-link:hover {
     color: var(--primary-blue);
-
+    border: 1px solid var(--primary-blue);
+    border-radius: 5em;
+    margin: 0 .5em;
 }
 
 .nav-link-active, .nav-link-active:hover {

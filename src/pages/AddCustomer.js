@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
+import * as Icon from 'react-feather';
 
 import '../styling/AddCustomer.css';
 
@@ -83,6 +84,9 @@ class AddCustomer extends Component {
             customerPin: '',
             customerCountry: 'India',
         });
+
+        toast.warning('✏️ Form cleared');
+
     } // * End of clearForm Method
 
     // * Method to handle the form validation
@@ -90,7 +94,7 @@ class AddCustomer extends Component {
         
         if(this.state.customerName === '' || this.state.customerEmail === '' || this.state.customerPhone1 === '') {
 
-            toast.warning('Please fill all the details!');
+            toast.warning('🙅‍♂️ Please fill all the details!');
             return false;
         }
 
@@ -121,10 +125,11 @@ class AddCustomer extends Component {
                     pauseOnFocusLoss
                     draggable
                     pauseOnHover
-                    />
+                />
+
                 <div className='form-section'>
 
-                    <div className='heading-section'>Customer Details</div>
+                    <div className='heading-section'>Customer Details &nbsp; <Icon.UserPlus /></div>
                     
                     < div
                         className='add-customer-form'
@@ -132,7 +137,7 @@ class AddCustomer extends Component {
 
                         {/* CUSTOMER NAME */}
                         <label>
-                            Customer Name: 
+                            👤 Customer Name: 
                         </label>
                         <br />    
                         <input
@@ -149,7 +154,7 @@ class AddCustomer extends Component {
 
                         {/* CUSTOMER EMAIL */}
                         <label>
-                            Customer Email: 
+                            📧 Customer Email: 
                         </label>
                         <br />
                         <input
@@ -168,7 +173,7 @@ class AddCustomer extends Component {
                         <div className='forms-row'>
                             {/* CUSTOMER PHONE 1 */}
                             <label className='phone-label'>
-                                Phone No.: 
+                                📱 Phone No.: 
                             </label>
                             <br />
                             <input
@@ -185,7 +190,7 @@ class AddCustomer extends Component {
             
                             {/* CUSTOMER PHONE 2 */}
                             <label className='phone-label'>
-                                Alternate Phone No.: 
+                                ☎️ Alternate Phone No.: 
                             </label>
                             <br />
                             <input
@@ -203,13 +208,13 @@ class AddCustomer extends Component {
 
                         <hr/>
 
-                        <p className='form-sub-heading'>Address</p>
+                        <p className='form-sub-heading'>Address 📓</p>
 
                         {/* CUSTOMER ADDRESS ROW - I */}
                         <div className='forms-row'>
                             {/* CUSTOMER HOUSE NO */}
                             <label className='address-label'>
-                                House/Flat No.: 
+                                🏡 House/Flat No.: 
                             </label>
                             <br />
                             <input
@@ -226,7 +231,7 @@ class AddCustomer extends Component {
             
                             {/* CUSTOMER ROAD NAME */}
                             <label className='address-label'>
-                                Road Name.: 
+                                🛣️ Road Name.: 
                             </label>
                             <br />
                             <input
@@ -243,7 +248,7 @@ class AddCustomer extends Component {
                         <div className='forms-row'>
                             {/* CUSTOMER AREA NAME */}
                             <label className='address-label'>
-                                Area Name: 
+                                📍 Area Name: 
                             </label>
                             <br />
                             <input
@@ -260,7 +265,7 @@ class AddCustomer extends Component {
             
                             {/* CUSTOMER LANDMARK */}
                             <label className='address-label'>
-                                Landmark: 
+                                🚧 Landmark: 
                             </label>
                             <br />
                             <input
@@ -277,7 +282,7 @@ class AddCustomer extends Component {
                         <div className='forms-row'>
                             {/* CUSTOMER CITY */}
                             <label className='address-label'>
-                                City: 
+                                🌆 City: 
                             </label>
                             <br />
                             <input
@@ -294,7 +299,7 @@ class AddCustomer extends Component {
             
                             {/* CUSTOMER Pin */}
                             <label className='address-label'>
-                                PIN Code: 
+                                🔢 PIN Code: 
                             </label>
                             <br />
                             <input
@@ -310,7 +315,7 @@ class AddCustomer extends Component {
                         <div className='forms-row country-row'>
                             {/* CUSTOMER Country */}
                             <label className='address-label'>
-                                Country: 
+                                🗺️ Country: 
                             </label>
                             <br />
                             <input
@@ -331,14 +336,14 @@ class AddCustomer extends Component {
                                 className='add-customer-btn form-btn'
                                 onClick={ () => this.addCustomer() }
                             >
-                                Add Customer
+                                <Icon.UserPlus size={ 18 } /> &nbsp; Add Customer
                             </button>
 
                             <button 
                                 className='clear-form-btn form-btn'
                                 onClick={ () => this.clearForm() }
                             >
-                                Clear Form
+                                <Icon.X size={ 18 } /> &nbsp; Clear Form
                             </button>
                         </div>
 

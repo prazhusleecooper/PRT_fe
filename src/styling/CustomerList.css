@@ -14,6 +14,83 @@
     margin: 1em 0;
 }
 
+.search-bar-section {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; 
+}
+
+.search-text-input {
+    height: 2em;
+    width: 25em;
+    padding: .5em;
+    outline: none;
+    border: 1px solid #9C9C9C;
+}
+
+.search-text-input:hover {
+    outline: none;
+    border: 1px solid var(--primary-blue-light);
+}
+
+.search-text-input:focus, .search-text-input:focus:hover, .search-text-input:active {
+    outline: none;
+    border: 1px solid var(--primary-blue);
+}
+
+.search-btn, .search-btn:active, .search-btn:focus {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    border: none;
+    outline: none;
+    margin: 0 1.5em;
+    padding: .25em 1.25em;
+    border-radius: 5em;
+    color: #FFFFFF;
+    background-color: var(--primary-blue);
+}
+.download-btns-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    margin: 0 1.5em;
+    padding: .25em 1.25em;
+    border-radius: 5em;
+    color: #FFFFFF;
+}
+
+.donwload-filtered-btn, .donwload-filtered-btn:active, .donwload-filtered-btn:focus, .donwload-filtered-btn:hover {
+    width: 10em;
+    border: none;
+    outline: none;
+    margin: 0 1.5em;
+    padding: .25em 1em;
+    border-radius: 5em;
+    color: #FFFFFF;
+    background-color: var(--primary-blue-light);
+    text-align: center;
+}
+
+.donwload-all-btn, .donwload-all-btn:active, .donwload-all-btn:focus, .donwload-all-btn:hover {
+    width: 10em;    
+    border: none;
+    outline: none;
+    margin: 0 1.5em;
+    padding: .25em 1em;
+    border-radius: 5em;
+    color: #FFFFFF;
+    background-color: var(--primary-blue);
+    text-align: center;
+}
+
+
 table {
     -webkit-box-shadow: 0px 0px 37px 5px rgba(153,153,153,1);
     -moz-box-shadow: 0px 0px 37px 5px rgba(153,153,153,1);
@@ -23,6 +100,13 @@ table {
 
 th {
     padding: 1em;
+}
+
+.table-th {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 td {
@@ -54,6 +138,10 @@ tr:nth-child(even) {
     height: 2.5em;
 }
 
+.table-info-section {
+    margin: 1em .5em;
+}
+
 .modal-header {
     font-size: 1.25em;
 }
@@ -83,3 +171,125 @@ tr:nth-child(even) {
 .modal-row-address {
     font-size: 1.35em;
 }
+
+/** LOADING ANIMATION */
+
+
+@keyframes spin {
+    from {
+      transform: rotate(0);
+    }
+    to{
+      transform: rotate(359deg);
+    }
+  }
+  
+  @keyframes spin3D {
+    from {
+      transform: rotate3d(.5,.5,.5, 360deg);
+    }
+    to{
+      transform: rotate3d(0deg);
+    }
+  }
+  
+  @keyframes configure-clockwise {
+    0% {
+      transform: rotate(0);
+    }
+    25% {
+      transform: rotate(90deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    75% {
+      transform: rotate(270deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes configure-xclockwise {
+    0% {
+      transform: rotate(45deg);
+    }
+    25% {
+      transform: rotate(-45deg);
+    }
+    50% {
+      transform: rotate(-135deg);
+    }
+    75% {
+      transform: rotate(-225deg);
+    }
+    100% {
+      transform: rotate(-315deg);
+    }
+  }
+  
+  @keyframes pulse {
+    from {
+      opacity: 1;
+      transform: scale(1);
+    }
+    to {
+      opacity: .25;
+      transform: scale(.75);
+    }
+  }
+  
+
+.leo-border-1 {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: rgb(63,249,220);
+    background: linear-gradient(0deg, #FFFFFF 33%, var(--primary-blue) 100%);
+    animation: spin3D 1.8s linear 0s infinite;
+  }
+  
+  .leo-core-1 {
+    width: 100%;
+    height: 100%;
+    background-color: #37474faa;
+    border-radius: 50%;
+  }
+  
+  .leo-border-2 {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgb(251, 91, 83);
+    background: linear-gradient(0deg, rgba(251, 91, 83, 0.1) 33%, #FFFFFF 100%);
+    animation: spin3D 2.2s linear 0s infinite;
+  }
+  
+  .leo-core-2 {
+    width: 100%;
+    height: 100%;
+    background-color: #1d2630aa;
+    border-radius: 50%;
+  }
+  
+  .loading-bg {
+        width: 89%;
+        height: 70vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        /* margin: 0 10em 0 0; */
+        position: absolute;
+  }

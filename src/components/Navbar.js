@@ -1,6 +1,7 @@
 // ? NPM library import
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
+import * as Icon from 'react-feather';
 
 // ? Project files import
 import '../styling/Navbar.css';
@@ -23,7 +24,10 @@ class Navbar extends Component {
     toggleCollapse = () => {
         
         this.setState({ navBarOpen: !this.state.navBarOpen });
-    }
+    }// * End of toggleCollapse Method
+
+
+    // ? Rendering methods
 
 
     // ? Render Method
@@ -31,7 +35,7 @@ class Navbar extends Component {
 
         return(
 
-            <>
+            <div>
                 <div className='navBar'>
                     <div className='navBar-left'>
                         PRT Customers App
@@ -43,18 +47,18 @@ class Navbar extends Component {
                             className='nav-link'
                             activeClassName='nav-link-active'
                         >
-                                Add Customer
+                                <Icon.UserPlus size={ 18.5 } /> &nbsp; Add Customer
                         </NavLink>
                         <NavLink 
                             to='/customerList'
                             className='nav-link'
                             activeClassName='nav-link-active'
                         >
-                                Customers List
+                            <Icon.List size={ 18.5 } /> &nbsp; Customers List
                         </NavLink>
                     </div>
                 </div>    
-            </>
+            </div>
         );
     }
 }
